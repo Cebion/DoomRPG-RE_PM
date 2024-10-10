@@ -85,7 +85,7 @@ void closeZipFile(zip_file_t* zipFile)
 unsigned char* readZipFileEntry(const char* name, zip_file_t* zipFile, int* sizep)
 {
     char filepath[256];
-    snprintf(filepath, sizeof(filepath), "gamedir/extracted/%s", name);
+    snprintf(filepath, sizeof(filepath), "extracted/%s", name);
     
     SDL_RWops* file = SDL_RWFromFile(filepath, "rb");
     if (!file) {
