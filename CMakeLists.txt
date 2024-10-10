@@ -7,6 +7,8 @@ if(MSVC)
 	add_definitions("/D_CRT_SECURE_NO_WARNINGS")
 endif()
 
+add_compile_options(-fsigned-char)
+
 find_package(SDL2 REQUIRED)
 find_package(SDL2_mixer REQUIRED)
 find_package(ZLIB REQUIRED)
